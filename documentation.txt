@@ -1,0 +1,233 @@
+Aryan Jain - Portfolio Website Documentation
+======================================================
+
+Project: assgement_1.html
+Course: Front End Development
+Student: Aryan Jain
+Roll No: 590021778
+Batch: Batch 5
+Date: September 9, 2026
+
+======================================================
+1. OVERVIEW
+======================================================
+
+This project is a responsive personal portfolio website built
+with HTML5, CSS3, and vanilla JavaScript. It features a dark
+OLED-themed design with a fixed navigation bar, hero section,
+about section, projects grid, contact section, and footer.
+
+======================================================
+2. TECHNOLOGIES USED
+======================================================
+
+- HTML5: Semantic markup (nav, section, footer, ul, li)
+- CSS3: Custom properties (variables), Flexbox, Grid
+  - backdrop-filter (with -webkit- prefix for Safari)
+  - CSS variables for theming
+  - Responsive grid layout for projects
+- JavaScript: Referenced for project descriptions (CLP clock,
+  Kaleidoscope Drawer, T-Rex Runner Game)
+
+======================================================
+3. DESIGN THEME
+======================================================
+
+Color scheme (OLED dark theme):
+
+  --primary:        #5865f2  (Blurple)
+  --primary-hover:  #4752c4  (Darker Blurple)
+  --bg:             #000000  (Pure Black)
+  --card-bg:        #111214  (Dark Container)
+  --card-border:    #1e1f22  (Border Color)
+  --text:           #f2f3f5  (Light Text)
+  --text-muted:     #949ba4  (Muted Text)
+
+======================================================
+4. SECTIONS
+======================================================
+
+4.1 Navigation (nav)
+  - Fixed at top of viewport
+  - Semi-transparent dark background with blur effect
+  - Links: About, Projects, Contact
+
+4.2 Hero (section#hero)
+  - Full viewport height (min-height: 80vh)
+  - Displays name, tagline, and call-to-action button
+  - Flexbox columnar layout, left-aligned content
+
+4.3 About (section#about)
+  - Student metadata (Roll No, Batch)
+  - Short bio paragraph
+  - Skills list (HTML5, CSS3, JavaScript, DOM, Git, C, Python)
+
+4.4 Projects (section#projects)
+  - Responsive grid (auto-fit, minmax 280px)
+  - Three project cards with descriptions and tech tags:
+    a) CLP (Clock App) - JavaScript, HTML, CSS
+    b) Kaleidoscope Drawer - JavaScript, CSS Animations
+    c) T-Rex Runner Game - JavaScript, Game Loop
+  - Each card has a GitHub link (target=_blank)
+
+4.5 Contact (section#contact)
+  - Email link (mailto:)
+  - GitHub profile link (target=_blank)
+
+4.6 Footer
+  - Copyright notice with roll number and batch
+  - Download button for this documentation file
+
+======================================================
+5. SECURITY NOTES
+======================================================
+
+- All external links use target="_blank" with
+  rel="noopener noreferrer" to prevent reverse tab-nabbing.
+- Internal anchor links (#about, #projects, #contact) use
+  standard href navigation without security concerns.
+
+======================================================
+6. RESPONSIVENESS
+======================================================
+
+- The main content is constrained to max-width: 1000px
+  and centered with margin: 0 auto.
+- The projects grid uses CSS Grid with auto-fit and minmax
+  to adapt to different screen sizes.
+- The skills list uses Flexbox with flex-wrap for responsive
+  tag layout.
+- The nav uses Flexbox for space-between layout.
+
+======================================================
+7. AI ASSISTANCE & PROMPTS
+======================================================
+
+Artificial Intelligence was used to assist in generating the base 
+HTML boilerplate, custom CSS color themes, and improving textual content clarity.
+
+7.1 Initial HTML Template Generation
+Prompt used:
+"Write a clean, modern, and simple single-file HTML personal portfolio 
+template with internal CSS inside a <style> tag in the <head>.
+Requirements:
+Layout & Sections:
+A fixed header containing a title ("Portfolio") on the left and smooth-scrolling navigation links ("About", "Projects", "Contact") on the right.
+A full-width hero section with a light gray background (#f4f4f4), centered text featuring a heading "Hi, I'm Your Name", and a subtitle "Computer Science Student & Developer".
+An "About Me" section describing a passion for software engineering, Python, C, and web development.
+A "Projects" section with card-style containers. Each project should have a light background (#f9f9f9), a 4px solid blue left border (#007bff), and inner padding. Include two sample projects: "Weather Dashboard" (Python/Matplotlib) and "Data Structures in C".
+A "Contact" section with an email placeholder (your.email@example.com).
+A dark footer (#222) with white copyright text reading © 2026 Your Name.
+Styling:
+Font: Arial, sans-serif.
+Color scheme: Dark header/footer (#222), light gray hero, white body, dark text (#333), and blue highlight accent (#007bff).
+Max-width of 700px for section content, centered on the page."
+
+Prompt Output Generated:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fff; }
+        header { position: fixed; top: 0; left: 0; width: 100%; background: #222; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+        header h2 { font-size: 1.5rem; }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; transition: color 0.2s ease; }
+        nav a:hover { color: #007bff; }
+        .hero { background: #f4f4f4; text-align: center; padding: 120px 20px 60px 20px; width: 100%; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; color: #555; }
+        section { padding: 40px 20px; max-width: 700px; margin: 0 auto; }
+        section h3 { font-size: 1.5rem; margin-bottom: 15px; color: #222; }
+        .project { background: #f9f9f9; border-left: 4px solid #007bff; padding: 15px; margin-bottom: 15px; border-radius: 0 4px 4px 0; }
+        .project h4 { font-size: 1.1rem; margin-bottom: 5px; color: #111; }
+        #contact a { color: #007bff; text-decoration: none; }
+        #contact a:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 20px; background: #222; color: #fff; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Portfolio</h2>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="hero">
+        <h1>Hi, I'm Your Name</h1>
+        <p>Computer Science Student & Developer</p>
+    </div>
+    <section id="about">
+        <h3>About Me</h3>
+        <p>I am a computer science student passionate about software engineering, coding in Python and C, and building web applications.</p>
+    </section>
+    <section id="projects">
+        <h3>Projects</h3>
+        <div class="project">
+            <h4>Weather Dashboard</h4>
+            <p>A Python application for analyzing and visualizing temperature data using Matplotlib.</p>
+        </div>
+        <div class="project">
+            <h4>Data Structures in C</h4>
+            <p>An implementation of core data structures and custom algorithms.</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2026 Your Name</p>
+    </footer>
+</body>
+</html>
+
+7.2 Dark Mode Theme Variables Generation
+Prompt used:
+"Generate a CSS :root block defining a dark color palette using custom properties.
+Include variables for the following colors:
+Primary: Blurple (with a darker Blurple variant for hover states)
+Background: Pure Black
+Card Background: Dark Charcoal / OLED Container Gray
+Card Border: Dark Slate Gray
+Text: Off-White
+Muted Text: Muted Gray"
+
+Prompt Output Generated:
+:root {
+    --primary: #5865f2;         /* Pure Blurple */
+    --primary-hover: #4752c4;   /* Darker Blurple */
+    --bg: #000000;              /* Pure Black */
+    --card-bg: #111214;         /* Dark Charcoal / OLED Container Gray */
+    --card-border: #1e1f22;     /* Dark Slate Gray */
+    --text: #f2f3f5;            /* Off-White */
+    --text-muted: #949ba4;      /* Muted Gray */
+}
+
+7.3 Additional AI Usage
+- AI was further utilized to refine, format, and enhance overall text quality across project documentation and bio descriptions.
+
+======================================================
+8. FILE STRUCTURE
+======================================================
+
+  assgement_1.html      - Main portfolio HTML file
+  documentation.txt     - This documentation file
+
+======================================================
+9. BROWSER SUPPORT
+======================================================
+
+- Modern browsers (Chrome 76+, Firefox 70+, Edge 79+)
+- Safari 14+ (backdrop-filter with -webkit- prefix)
+- Mobile browsers (responsive grid and flexbox)
+
+======================================================
+END OF DOCUMENTATION
+======================================================
